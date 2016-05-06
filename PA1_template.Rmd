@@ -24,9 +24,10 @@ hist(steps_per_day$x, xlab="Steps per day", main="Histogram of the number of ste
 ```
 
 ###3.Mean and median number of steps taken each day
-Calculate mean and median by the summary function.
+Calculate mean and median.
 ```{r}
-summary(steps_per_day$x)
+mean(steps_per_day$x)
+median(steps_per_day$x)
 ```
 
 ###4.Time series plot of the average number of steps taken
@@ -62,10 +63,11 @@ new_steps_per_day <- aggregate(new_activity$steps, by=list(date=new_activity$dat
 hist(new_steps_per_day$x, xlab="Steps per day", main="Histogram of the number of steps per day", col="wheat")
 ```
 
-Again, calculate mean and median for the imputed dataset by the summary function.  
+Again, calculate mean and median for the imputed dataset.  
 The mean and the median are now the same.
 ```{r}
-summary(new_steps_per_day$x)
+mean(new_steps_per_day$x)
+median(new_steps_per_day$x)
 ```
 
 ###8.Panel plot comparing the average number of steps taken per 5-minute interval across weekdays and weekends

@@ -21,15 +21,22 @@ hist(steps_per_day$x, xlab="Steps per day", main="Histogram of the number of ste
 ![](PA1_template_files/figure-html/unnamed-chunk-3-1.png)<!-- -->
 
 ###3.Mean and median number of steps taken each day
-Calculate mean and median by the summary function.
+Calculate mean and median.
 
 ```r
-summary(steps_per_day$x)
+mean(steps_per_day$x)
 ```
 
 ```
-##    Min. 1st Qu.  Median    Mean 3rd Qu.    Max. 
-##       0    6778   10400    9354   12810   21190
+## [1] 9354.23
+```
+
+```r
+median(steps_per_day$x)
+```
+
+```
+## [1] 10395
 ```
 
 ###4.Time series plot of the average number of steps taken
@@ -84,16 +91,23 @@ hist(new_steps_per_day$x, xlab="Steps per day", main="Histogram of the number of
 
 ![](PA1_template_files/figure-html/unnamed-chunk-9-1.png)<!-- -->
 
-Again, calculate mean and median for the imputed dataset by the summary function.  
+Again, calculate mean and median for the imputed dataset.  
 The mean and the median are now the same.
 
 ```r
-summary(new_steps_per_day$x)
+mean(new_steps_per_day$x)
 ```
 
 ```
-##    Min. 1st Qu.  Median    Mean 3rd Qu.    Max. 
-##      41    9819   10770   10770   12810   21190
+## [1] 10766.19
+```
+
+```r
+median(new_steps_per_day$x)
+```
+
+```
+## [1] 10766.19
 ```
 
 ###8.Panel plot comparing the average number of steps taken per 5-minute interval across weekdays and weekends
